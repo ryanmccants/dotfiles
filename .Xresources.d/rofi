@@ -1,0 +1,10 @@
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: argb:88000000, argb:88000000, argb:88888888
+rofi.color-normal: argb:00000000, argb:aa00ffff, argb:00000000, argb:88000000, argb:ff00ffff
+rofi.color-active: base00, #268bd2, #eee8d5, #268bd2, #fdf6e3
+rofi.color-urgent: base00, #dc322f, #eee8d5, #dc322f, #fdf6e3
+rofi.separator-style: solid
+rofi.font: Hack 14

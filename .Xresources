@@ -1,0 +1,3 @@
+#include ".schemes/base16-xresources/base16-bright.dark.256.xresources"
+#include ".Xresources.d/rofi"
+#include ".Xresources.d/urxvt"
