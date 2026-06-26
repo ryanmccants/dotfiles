@@ -1,0 +1,11 @@
+# Ignore local machine-specific config overrides
+.config/hypr/local.conf
+.config/nvim/lua/config/local.lua
+.zshrc.local
+.zshenv.local
+
+# Neovim cache/log files
+.config/nvim/lazy-lock.json
+.config/nvim/.neoconf.json
+.config/nvim/lazyvim.json
+.config/nvim/lua/config/local.lua

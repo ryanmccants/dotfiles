@@ -1,0 +1,6 @@
+-- Machine-specific Neovim configuration (Example)
+-- Copy this to ~/.config/nvim/lua/config/local.lua and customize.
+
+-- Example: Add local keymaps or options
+-- vim.opt.shiftwidth = 4
+-- vim.opt.tabstop = 4

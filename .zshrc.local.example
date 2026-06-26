@@ -1,0 +1,6 @@
+# Machine-specific Zsh configuration (Example)
+# Copy this to ~/.zshrc.local and customize.
+
+# Example: local paths or environment variables
+# export PATH="/custom/local/path:$PATH"
+# alias db-start="docker-compose up -d"

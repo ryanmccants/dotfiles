@@ -10,43 +10,19 @@ zstyle :compinstall filename '/home/ryan/.zshrc'
 
 autoload -Uz compinit
 compinit
-
 # End of lines added by compinstall
-TERM=xterm
-export EDITOR="nvim"
-alias ls="ls --color --group-directories-first"
 
-# Python Virtualenv config
-export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
+eval "$(starship init zsh)"
+export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 
-# Ruby gems path
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+alias k=kubectl
+alias vim=nvim
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-# Anaconda alias
-alias conda="~/anaconda3/bin/conda"
 
-# Cabal for Haskell
-PATH=$PATH:~/.cabal/bin
-PATH=$PATH:.cabal-sandbox/bin
+# Added by Antigravity CLI installer
+export PATH="/home/ryan/.local/bin:$PATH"
+export PATH="/home/ryan/.local/bin:$PATH"
 
-# Lemonbar
-export XDG_CONFIG_HOME="$HOME/.config"
-PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=24
-PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
-PANEL_WM_NAME=bspwm_panel
-export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
-
-# source /usr/share/doc/pkgfile/command-not-found.zsh
-
-function mkcd {
-  if [ ! -n "$1" ]; then
-    echo "Enter a directory name"
-  elif [ -d $1 ]; then
-    echo "\`$1' already exists"
-  else
-    mkdir $1 && cd $1
-  fi
-}
-
+# Load machine-specific configuration if it exists
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
